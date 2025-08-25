@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Trash2, Edit3, Save } from "lucide-react"; // librería íconos
+
 
 function App() {
   const [task, setTask] = useState("");
@@ -40,7 +42,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-900 bg-[url('/src/assets/doodlesedited.png')] flex items-center justify-center">
+
+
 
       <div className="bg-white/30 backdrop-blur-lg p-6 rounded-2xl shadow-2xl w-96 border border-white/20">
 
@@ -95,14 +99,14 @@ function App() {
                   onClick={() => saveEdit(i)}
                   className="text-green-600 hover:text-green-800 ml-2"
                 >
-                  💾
+                  <Save size={20} />
                 </button>
               ) : (
                 <button
                   onClick={() => startEdit(i)}
                   className="text-yellow-500 hover:text-yellow-700 ml-2"
                 >
-                  ✏️
+                  <Edit3 size={20} />
                 </button>
               )}
 
@@ -110,7 +114,7 @@ function App() {
                 onClick={() => deleteTask(i)}
                 className="text-red-500 hover:text-red-700 ml-2"
               >
-                ❌
+                <Trash2 size={20} />
               </button>
             </li>
           ))}
