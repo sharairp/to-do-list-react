@@ -48,7 +48,7 @@ function App() {
 
       <div className="bg-white/30 backdrop-blur-lg p-6 rounded-2xl shadow-2xl w-96 border border-white/20">
 
-        <h1 className="text-2xl font-bold text-center mb-4">To-Do List</h1>
+        <h1 className="text-4xl font-bold text-center mb-4 text-amber-400">To-Do List</h1>
 
         {/* Input para nueva tarea */}
         <div className="flex gap-2 mb-4">
@@ -57,12 +57,12 @@ function App() {
             value={task}
             onChange={(e) => setTask(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && addTask()}
-            className="flex-1 border rounded-xl px-3 py-2"
+            className="flex-1 border border-yellow-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             placeholder="Escribe una tarea..."
           />
           <button
             onClick={addTask}
-            className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-xl hover:opacity-90 transition"
+            className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-4 py-2 rounded-xl hover:opacity-90 transition hover:scale-105 transition"
           >
             Agregar
           </button>
