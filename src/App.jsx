@@ -40,8 +40,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-2xl shadow-xl w-96">
+    <div className="min-h-screen bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 flex items-center justify-center">
+
+      <div className="bg-white/30 backdrop-blur-lg p-6 rounded-2xl shadow-2xl w-96 border border-white/20">
+
         <h1 className="text-2xl font-bold text-center mb-4">To-Do List</h1>
 
         {/* Input para nueva tarea */}
@@ -56,7 +58,7 @@ function App() {
           />
           <button
             onClick={addTask}
-            className="bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600"
+            className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-xl hover:opacity-90 transition"
           >
             Agregar
           </button>
@@ -67,7 +69,7 @@ function App() {
           {tasks.map((t, i) => (
             <li
               key={i}
-              className="flex justify-between items-center bg-gray-100 px-3 py-2 mb-2 rounded-xl"
+              className="flex justify-between items-center bg-white/70 px-3 py-2 mb-2 rounded-xl hover:scale-105 transition"
             >
               {editIndex === i ? (
                 <input
